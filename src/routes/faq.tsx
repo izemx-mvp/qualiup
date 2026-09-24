@@ -1,0 +1,1 @@
+import {createFileRoute} from '@tanstack/react-router';import {FaqPage} from '@/components/pages/ContentPages';export const Route=createFileRoute('/faq')({head:()=>({meta:[{title:'FAQ — QualiUp Group'},{name:'description',content:'Réponses aux questions fréquentes sur les analyses, prélèvements, rapports et formations.'}]}),component:FaqPage});

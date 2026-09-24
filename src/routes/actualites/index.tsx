@@ -1,0 +1,1 @@
+import {createFileRoute} from '@tanstack/react-router';import {NewsPage} from '@/components/pages/NewsPages';export const Route=createFileRoute('/actualites/')({head:()=>({meta:[{title:'Actualités & expertise — QualiUp Group'},{name:'description',content:'Conseils et décryptages sur les analyses, contaminants et sécurité alimentaire.'}]}),component:NewsPage});

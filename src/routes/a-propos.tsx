@@ -1,0 +1,1 @@
+import {createFileRoute} from '@tanstack/react-router';import {AboutPage} from '@/components/pages/ContentPages';export const Route=createFileRoute('/a-propos')({head:()=>({meta:[{title:'À propos de QualiUp Group'},{name:'description',content:'Découvrez QualiUp Group, partenaire scientifique de l’industrie agroalimentaire au Maroc depuis 2014.'}]}),component:AboutPage});

@@ -1,0 +1,1 @@
+import {createFileRoute} from '@tanstack/react-router';import {AuditPage} from '@/components/pages/ContentPages';export const Route=createFileRoute('/audit-expertise')({head:()=>({meta:[{title:'Audit et Expertise — QualiUp Group'},{name:'description',content:'Audits hygiène, fournisseurs, conformité et process avec recommandations exploitables.'}]}),component:AuditPage});

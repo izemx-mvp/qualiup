@@ -10,33 +10,180 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AProposRouteImport } from './routes/a-propos'
+import { Route as AuditExpertiseRouteImport } from './routes/audit-expertise'
+import { Route as ConseilFormationRouteImport } from './routes/conseil-formation'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
+import { Route as PrestationsAnalysesRouteImport } from './routes/prestations-analyses'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as ActualitesIndexRouteImport } from './routes/actualites/index'
+import { Route as ActualitesSlugRouteImport } from './routes/actualites/$slug'
+import { Route as PrestationsSlugRouteImport } from './routes/prestations/$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AProposRoute = AProposRouteImport.update({
+  id: '/a-propos',
+  path: '/a-propos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuditExpertiseRoute = AuditExpertiseRouteImport.update({
+  id: '/audit-expertise',
+  path: '/audit-expertise',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConseilFormationRoute = ConseilFormationRouteImport.update({
+  id: '/conseil-formation',
+  path: '/conseil-formation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MentionsLegalesRoute = MentionsLegalesRouteImport.update({
+  id: '/mentions-legales',
+  path: '/mentions-legales',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrestationsAnalysesRoute = PrestationsAnalysesRouteImport.update({
+  id: '/prestations-analyses',
+  path: '/prestations-analyses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ActualitesIndexRoute = ActualitesIndexRouteImport.update({
+  id: '/actualites/',
+  path: '/actualites/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ActualitesSlugRoute = ActualitesSlugRouteImport.update({
+  id: '/actualites/$slug',
+  path: '/actualites/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrestationsSlugRoute = PrestationsSlugRouteImport.update({
+  id: '/prestations/$slug',
+  path: '/prestations/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
+  '/audit-expertise': typeof AuditExpertiseRoute
+  '/conseil-formation': typeof ConseilFormationRoute
+  '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/prestations-analyses': typeof PrestationsAnalysesRoute
+  '/services': typeof ServicesRoute
+  '/actualites/$slug': typeof ActualitesSlugRoute
+  '/prestations/$slug': typeof PrestationsSlugRoute
+  '/actualites/': typeof ActualitesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
+  '/audit-expertise': typeof AuditExpertiseRoute
+  '/conseil-formation': typeof ConseilFormationRoute
+  '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/prestations-analyses': typeof PrestationsAnalysesRoute
+  '/services': typeof ServicesRoute
+  '/actualites/$slug': typeof ActualitesSlugRoute
+  '/prestations/$slug': typeof PrestationsSlugRoute
+  '/actualites': typeof ActualitesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
+  '/audit-expertise': typeof AuditExpertiseRoute
+  '/conseil-formation': typeof ConseilFormationRoute
+  '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/prestations-analyses': typeof PrestationsAnalysesRoute
+  '/services': typeof ServicesRoute
+  '/actualites/$slug': typeof ActualitesSlugRoute
+  '/prestations/$slug': typeof PrestationsSlugRoute
+  '/actualites/': typeof ActualitesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/a-propos'
+    | '/audit-expertise'
+    | '/conseil-formation'
+    | '/contact'
+    | '/faq'
+    | '/mentions-legales'
+    | '/prestations-analyses'
+    | '/services'
+    | '/actualites/$slug'
+    | '/prestations/$slug'
+    | '/actualites/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/a-propos'
+    | '/audit-expertise'
+    | '/conseil-formation'
+    | '/contact'
+    | '/faq'
+    | '/mentions-legales'
+    | '/prestations-analyses'
+    | '/services'
+    | '/actualites/$slug'
+    | '/prestations/$slug'
+    | '/actualites'
+  id:
+    | '__root__'
+    | '/'
+    | '/a-propos'
+    | '/audit-expertise'
+    | '/conseil-formation'
+    | '/contact'
+    | '/faq'
+    | '/mentions-legales'
+    | '/prestations-analyses'
+    | '/services'
+    | '/actualites/$slug'
+    | '/prestations/$slug'
+    | '/actualites/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AProposRoute: typeof AProposRoute
+  AuditExpertiseRoute: typeof AuditExpertiseRoute
+  ConseilFormationRoute: typeof ConseilFormationRoute
+  ContactRoute: typeof ContactRoute
+  FaqRoute: typeof FaqRoute
+  MentionsLegalesRoute: typeof MentionsLegalesRoute
+  PrestationsAnalysesRoute: typeof PrestationsAnalysesRoute
+  ServicesRoute: typeof ServicesRoute
+  ActualitesSlugRoute: typeof ActualitesSlugRoute
+  PrestationsSlugRoute: typeof PrestationsSlugRoute
+  ActualitesIndexRoute: typeof ActualitesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +195,99 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/a-propos': {
+      id: '/a-propos'
+      path: '/a-propos'
+      fullPath: '/a-propos'
+      preLoaderRoute: typeof AProposRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/audit-expertise': {
+      id: '/audit-expertise'
+      path: '/audit-expertise'
+      fullPath: '/audit-expertise'
+      preLoaderRoute: typeof AuditExpertiseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/conseil-formation': {
+      id: '/conseil-formation'
+      path: '/conseil-formation'
+      fullPath: '/conseil-formation'
+      preLoaderRoute: typeof ConseilFormationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mentions-legales': {
+      id: '/mentions-legales'
+      path: '/mentions-legales'
+      fullPath: '/mentions-legales'
+      preLoaderRoute: typeof MentionsLegalesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/prestations-analyses': {
+      id: '/prestations-analyses'
+      path: '/prestations-analyses'
+      fullPath: '/prestations-analyses'
+      preLoaderRoute: typeof PrestationsAnalysesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/actualites/': {
+      id: '/actualites/'
+      path: '/actualites'
+      fullPath: '/actualites/'
+      preLoaderRoute: typeof ActualitesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/actualites/$slug': {
+      id: '/actualites/$slug'
+      path: '/actualites/$slug'
+      fullPath: '/actualites/$slug'
+      preLoaderRoute: typeof ActualitesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/prestations/$slug': {
+      id: '/prestations/$slug'
+      path: '/prestations/$slug'
+      fullPath: '/prestations/$slug'
+      preLoaderRoute: typeof PrestationsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AProposRoute: AProposRoute,
+  AuditExpertiseRoute: AuditExpertiseRoute,
+  ConseilFormationRoute: ConseilFormationRoute,
+  ContactRoute: ContactRoute,
+  FaqRoute: FaqRoute,
+  MentionsLegalesRoute: MentionsLegalesRoute,
+  PrestationsAnalysesRoute: PrestationsAnalysesRoute,
+  ServicesRoute: ServicesRoute,
+  ActualitesSlugRoute: ActualitesSlugRoute,
+  PrestationsSlugRoute: PrestationsSlugRoute,
+  ActualitesIndexRoute: ActualitesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

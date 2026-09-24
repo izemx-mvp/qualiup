@@ -1,0 +1,1 @@
+import {createFileRoute} from '@tanstack/react-router';import {ServicesPage} from '@/components/pages/ContentPages';export const Route=createFileRoute('/services')({head:()=>({meta:[{title:'Services — QualiUp Group'},{name:'description',content:'Analyses, conseil, formation, audit et expertise pour les professionnels au Maroc.'}]}),component:ServicesPage});

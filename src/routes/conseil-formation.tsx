@@ -1,0 +1,1 @@
+import {createFileRoute} from '@tanstack/react-router';import {AdvicePage} from '@/components/pages/ContentPages';export const Route=createFileRoute('/conseil-formation')({head:()=>({meta:[{title:'Conseil et Formation — QualiUp Group'},{name:'description',content:'Accompagnements HACCP, ISO 22000, hygiène et sécurité alimentaire adaptés à vos équipes.'}]}),component:AdvicePage});
